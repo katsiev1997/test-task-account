@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100..900&family=Kelly+Slab&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -6,13 +7,14 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-[#1e2025] dark:bg-gray-950;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
@@ -21,7 +23,16 @@ body {
 
 @theme inline {
   --font-heading: var(--font-sans);
-  --font-sans: 'Geist Variable', sans-serif;
+  --font-sans: "Geist Variable", sans-serif;
+  --font-family: var(--font-family);
+  --font-second: var(--second-family);
+  --font-third: var(--third-family);
+
+  --color-contrast: var(--contrast);
+  --color-additional-grey-1: var(--additional-grey-1);
+  --color-additional-grey-2: var(--additional-grey-2);
+  --color-accent-primary: var(--accent-primary);
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -63,6 +74,15 @@ body {
 }
 
 :root {
+  --font-family: "Alumni Sans", sans-serif;
+  --second-family: "Kelly Slab", sans-serif;
+  --third-family: "SF Pro", sans-serif;
+
+  --contrast: #fdfdfd;
+  --additional-grey-1: #c3c2bd;
+  --additional-grey-2: #2e3139;
+  --accent-primary: #ff0633;
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -137,6 +157,7 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-family);
   }
   html {
     @apply font-sans;
