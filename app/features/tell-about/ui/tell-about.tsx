@@ -3,7 +3,7 @@ import { Button } from "~/shared/components/ui/button";
 
 export const TellAbout = () => {
   return (
-    <div className="bg-contrast px-6 pb-6 flex-1 flex flex-col gap-4 md:h-[268px] lg:h-[248px]">
+    <div className="min-w-0 flex-1 md:basis-1/2 bg-contrast px-6 pb-6 flex flex-col gap-4 md:h-[268px] lg:h-[248px]">
       <div className="flex flex-col gap-2">
         <div className="h-[60px] flex flex-col gap-1">
           <StatusBadge status="available" />

@@ -1,10 +1,9 @@
 import circle from "~/shared/assets/images/circle.png";
-import gift from "~/shared/assets/icons/svg/gift.svg";
-import { Button } from "~/shared/components/ui/button";
+import { CarouselFortune } from "./carousel-fortune";
 
 export const FortuneWheel = () => {
   return (
-    <div className="flex-1 rounded-xl border-2 border-additional-grey-2 p-6 flex flex-col gap-4">
+    <div className="min-w-0 flex-1 md:basis-1/2 rounded-xl border-2 border-additional-grey-2 p-6 flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <div>
           <h3 className="text-[32px] font-family text-contrast leading-[100%]">
@@ -16,13 +15,7 @@ export const FortuneWheel = () => {
         </div>
         <img src={circle} alt="circle" className="size-18" />
       </div>
-      <div className="h-[208px]">carousel</div>
-      <Button variant="primary" className="gap-4 h-10 cursor-pointer">
-        <span className="text-2xl font-semibold uppercase font-family text-contrast leading-[100%]">
-          Испытать удачу
-        </span>
-        <img src={gift} alt="gift" className="size-6" />
-      </Button>
+      <CarouselFortune />
       <div className="flex flex-col gap-[10px]">
         <p className="font-family text-contrast text-xl leading-[100%]">
           Крути колесо 7 дней подряд без пропусков и получи на 7-й день
