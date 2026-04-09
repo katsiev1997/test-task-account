@@ -5,11 +5,11 @@ import { Navbar } from "./navbar";
 
 export const Header = () => {
   return (
-    <div className="h-20 flex items-center justify-between">
+    <header className="h-20 flex items-center justify-between">
       <MobileMenu />
       <Logo />
       <Navbar />
       <LangSwitcher />
-    </div>
+    </header>
   );
 };
